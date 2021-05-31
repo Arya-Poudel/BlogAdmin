@@ -7,7 +7,7 @@ const DeleteBlogComment = ({ commentId }) =>{
 
 	const handleDelete = () => {
 
-		fetch(`http://localhost:5000/admin/blogs/comments/${commentId}/delete`, {
+		fetch(`https://hidden-eyrie-46633.herokuapp.com/admin/blogs/comments/${commentId}/delete`, {
 			mode : 'cors',
 			method: 'DELETE',
 			headers: {

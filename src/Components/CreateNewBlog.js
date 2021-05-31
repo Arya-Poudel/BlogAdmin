@@ -10,7 +10,7 @@ const CreateNewBlog = () =>{
 
 		let formdata = new FormData(document.getElementById('create_blog_form'));
 		console.log({formdata});
-		fetch("http://localhost:5000/admin/blogs/new", {
+		fetch("https://hidden-eyrie-46633.herokuapp.com/admin/blogs/new", {
 			  method: "POST",
 			  mode : 'cors',
 			  headers: {

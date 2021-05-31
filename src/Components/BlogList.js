@@ -10,7 +10,7 @@ const BlogList = () =>{
 	console.log(localStorage.getItem('token'))
 
 	useEffect(() => {
-		fetch('http://localhost:5000/admin/blogs', 
+		fetch('https://hidden-eyrie-46633.herokuapp.com/admin/blogs', 
 			{
 				mode : 'cors',
 				headers: {

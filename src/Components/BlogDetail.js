@@ -8,7 +8,7 @@ const BlogDetail = ({ blogId }) =>{
 	const [errorMessage, setErrorMessage] = useState('');
 
 	useEffect(() => {
-		fetch(`http://localhost:5000/admin/blogs/${blogId}`, {
+		fetch(`https://hidden-eyrie-46633.herokuapp.com/admin/blogs/${blogId}`, {
 			mode : 'cors',
 			headers: {
 					Authorization:JSON.parse(localStorage.getItem('token'))

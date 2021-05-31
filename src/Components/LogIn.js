@@ -13,7 +13,7 @@ const LogIn = () => {
 		e.preventDefault();
 
 		let formdata = new FormData(document.getElementById('login_form'));
-		fetch("http://localhost:5000/beAdmin/", {
+		fetch("https://hidden-eyrie-46633.herokuapp.com/beAdmin/", {
 			  method: "POST",
 			  mode : 'cors',
 			  headers: {

@@ -6,7 +6,7 @@ const DeleteBlog = ({ blogId }) =>{
 
 	const handleDelete = () => {
 
-		fetch(`http://localhost:5000/admin/blogs/${blogId}/delete`, {
+		fetch(`https://hidden-eyrie-46633.herokuapp.com/admin/blogs/${blogId}/delete`, {
 			mode : 'cors',
 			method: 'DELETE',
 			headers: {

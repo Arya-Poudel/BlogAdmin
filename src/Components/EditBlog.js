@@ -10,7 +10,7 @@ const EditBlog = ({ blogId }) =>{
 		e.preventDefault();
 
 		let formdata = new FormData(document.getElementById('edit_blog_form'));
-		fetch(`http://localhost:5000/admin/blogs/${blogId}`, {
+		fetch(`https://hidden-eyrie-46633.herokuapp.com/admin/blogs/${blogId}`, {
 			  method: "PUT",
 			  mode : 'cors',
 			  headers: {
@@ -31,7 +31,7 @@ const EditBlog = ({ blogId }) =>{
 	}
 
 	useEffect(() => {
-		fetch(`http://localhost:5000/admin/blogs/${blogId}`, {
+		fetch(`https://hidden-eyrie-46633.herokuapp.com/admin/blogs/${blogId}`, {
 			mode : 'cors',
 			headers: {
 					Authorization:JSON.parse(localStorage.getItem('token'))
