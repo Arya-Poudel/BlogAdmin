@@ -45,6 +45,8 @@ const Navbar = () =>{
 			    {message==='LOGOUT' && 
 			        <button className="linkBtn" onClick={handleLogout}>Logout</button> 
 			    }
+				<a href="https://arya-poudel.github.io/BlogViewer/#/" className="navlink">VIEWER</a>
+			    
 	        </div>     
 	   </nav>
    	

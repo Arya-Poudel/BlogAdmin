@@ -8,7 +8,6 @@ const BlogList = () =>{
 	const [bloglist, setBlogList] = useState([]);
 	const [errorMessage, setErrorMessage] = useState('');
 
-	console.log(localStorage.getItem('token'))
 
 	useEffect(() => {
 		fetch('https://hidden-eyrie-46633.herokuapp.com/admin/blogs', 
