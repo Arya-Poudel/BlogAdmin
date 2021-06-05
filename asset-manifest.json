@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/BlogAdmin/static/css/main.364cda54.chunk.css",
-    "main.js": "/BlogAdmin/static/js/main.6235b376.chunk.js",
-    "main.js.map": "/BlogAdmin/static/js/main.6235b376.chunk.js.map",
+    "main.css": "/BlogAdmin/static/css/main.6d7d4166.chunk.css",
+    "main.js": "/BlogAdmin/static/js/main.cf912029.chunk.js",
+    "main.js.map": "/BlogAdmin/static/js/main.cf912029.chunk.js.map",
     "runtime-main.js": "/BlogAdmin/static/js/runtime-main.cdc15b8f.js",
     "runtime-main.js.map": "/BlogAdmin/static/js/runtime-main.cdc15b8f.js.map",
     "static/js/2.0f55f841.chunk.js": "/BlogAdmin/static/js/2.0f55f841.chunk.js",
     "static/js/2.0f55f841.chunk.js.map": "/BlogAdmin/static/js/2.0f55f841.chunk.js.map",
     "index.html": "/BlogAdmin/index.html",
-    "static/css/main.364cda54.chunk.css.map": "/BlogAdmin/static/css/main.364cda54.chunk.css.map",
+    "static/css/main.6d7d4166.chunk.css.map": "/BlogAdmin/static/css/main.6d7d4166.chunk.css.map",
     "static/js/2.0f55f841.chunk.js.LICENSE.txt": "/BlogAdmin/static/js/2.0f55f841.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.cdc15b8f.js",
     "static/js/2.0f55f841.chunk.js",
-    "static/css/main.364cda54.chunk.css",
-    "static/js/main.6235b376.chunk.js"
+    "static/css/main.6d7d4166.chunk.css",
+    "static/js/main.cf912029.chunk.js"
   ]
 }
