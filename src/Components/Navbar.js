@@ -5,7 +5,7 @@ const Navbar = () =>{
 
 	const handleLogout =() =>{
 		localStorage.clear();
-		window.location.href = "/"
+		window.location.href = "https://arya-poudel.github.io/BlogAdmin/#/"
 	}
 
 	const [message, setMessage] = useState('');

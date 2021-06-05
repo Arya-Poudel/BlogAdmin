@@ -7,7 +7,7 @@ const LogIn = () => {
 	const [message, setMessage] = useState('');
 
 	if(JSON.parse(localStorage.getItem('token'))) {
-			window.location.href = "http://localhost:3000/#/blogs";
+			window.location.href = "https://arya-poudel.github.io/BlogAdmin/#/blogs";
 	};
 
 	const handleFormSubmit = (e) => {

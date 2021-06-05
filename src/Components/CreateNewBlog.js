@@ -10,7 +10,6 @@ const CreateNewBlog = () =>{
 		e.preventDefault();
 
 		let formdata = new FormData(document.getElementById('create_blog_form'));
-		console.log({formdata});
 		fetch("https://hidden-eyrie-46633.herokuapp.com/admin/blogs/new", {
 			  method: "POST",
 			  mode : 'cors',

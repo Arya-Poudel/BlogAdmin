@@ -21,8 +21,8 @@ const DeleteBlogComment = ({ commentId }) =>{
  			return response.json()
  		})
   		.then(data => {
-  			window.location.href = "/blogs";
-			})
+  			window.location.href = "https://arya-poudel.github.io/BlogAdmin/#/blogs";
+		})
   		.catch(err => setErrorMessage(err.message))
   	}
 
