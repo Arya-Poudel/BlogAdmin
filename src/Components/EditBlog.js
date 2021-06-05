@@ -52,20 +52,22 @@ const EditBlog = ({ blogId }) =>{
 	return(
 	<>
 		<Navbar />
-		<form id="edit_blog_form"  onSubmit={handleFormSubmit} className="form_div">
-        	<label htmlFor="title">Title:</label>
-        	<input type="text" id="title" name="title" defaultValue={blogDetail.title} required/>
-        	<label htmlFor="text">Text:</label>
-        	<input type="text" id="text" name="text" minLength="10" defaultValue={blogDetail.text} required/>
-        	<div>IsPublished:<br />
-				<input type="radio" id="true" name="ispublished" value="true" defaultChecked={blogDetail.isPublished}/>
-				<label htmlFor="true">True</label><br />
-				<input type="radio" id="false" name="ispublished" value="false" defaultChecked={!blogDetail.isPublished}/>
-				<label htmlFor="false">False</label><br />
-			</div>
-			<button type="submit" className="linkBtn">Submit</button>
-        </form>
-        <p className="message-post">{message}</p>
+		<div className="createblogcomments">
+			<form id="edit_blog_form"  onSubmit={handleFormSubmit} className="form_div" autoComplete="off">
+	        	<label htmlFor="title">Title:</label>
+	        	<input type="text" id="title" name="title" defaultValue={blogDetail.title} required/>
+	        	<label htmlFor="text">Text:</label>
+	        	<textarea  id="text" name="text" minLength="50" defaultValue={blogDetail.text} required></textarea>
+	        	<div>IsPublished:<br />
+					<input type="radio" id="true" name="ispublished" value="true" defaultChecked={blogDetail.isPublished}/>
+					<label htmlFor="true">True</label><br />
+					<input type="radio" id="false" name="ispublished" value="false" defaultChecked={!blogDetail.isPublished}/>
+					<label htmlFor="false">False</label><br />
+				</div>
+				<button type="submit" className="linkBtn">Submit</button>
+	        </form>
+	        <p style={{textAlign: "center", fontWeight:"bold"}}>{message}</p>
+        </div>
 		{errorMessage &&
 		 <p style={{textAlign: "center", fontWeight:"bold"}}>
 		 	{errorMessage}

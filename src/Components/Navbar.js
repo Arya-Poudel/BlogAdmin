@@ -41,11 +41,11 @@ const Navbar = () =>{
 		<nav className="navbar ">
 			<h1>DEMO ADMIN</h1>
 			<div >
-		        <Link to="/blogs" className="navlink">BLOGS</Link>  
+		        <Link to="/blogs" className="navlink">BLOGS</Link> 
+				<a href="https://arya-poudel.github.io/BlogViewer/#/" className="navlink">VIEWER</a> 
 			    {message==='LOGOUT' && 
 			        <button className="linkBtn" onClick={handleLogout}>Logout</button> 
 			    }
-				<a href="https://arya-poudel.github.io/BlogViewer/#/" className="navlink">VIEWER</a>
 			    
 	        </div>     
 	   </nav>
