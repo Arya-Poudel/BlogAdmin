@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 
 const BlogList = () =>{
@@ -31,20 +32,21 @@ const BlogList = () =>{
 	
 	return(
 	<>
-		<h1 style={{textAlign: "center"}}> BlogList </h1>
+		<Navbar />
+		<h1 style={{textAlign: "center"}}> Posts </h1>
 		{!errorMessage && 
 			<div>
 		        {bloglist.map(blog => (
 		        	<Link to={`/blogs/${blog._id}`} key={blog._id} className="link">
 						<div className="blog"> 
-							<h1 style={{textAlign: "center"}}>{blog.title}</h1>
+							<h2>{blog.title}</h2>
 							<p className="blogDesc">{blog.truncated_text} ......</p>
 						</div>
 					</Link>
 		   
 				   )
 				)}
-			<Link to="/blogs/new">
+			<Link to="/blogs/new" className="action-link">
 				<button className="linkBtn">
 						Create a New Blog
 				</button>

@@ -1,6 +1,5 @@
 import './App.css';
 import React from "react";
-import Navbar from './Components/Navbar';
 import LogIn from './Components/LogIn';
 import BlogList from './Components/BlogList';
 import CreateNewBlog from './Components/CreateNewBlog';
@@ -12,7 +11,7 @@ import EditBlog from './Components/EditBlog';
 import { HashRouter as Router, Switch, Route} from "react-router-dom";
 
 
-//Authorization Bearer token
+
 function App() {
 
 
@@ -20,7 +19,6 @@ function App() {
     <div className="App">
     
         <Router basename="/">
-        <Navbar />
 	       <Switch>
 	          <Route exact path="/" component={LogIn} />
                <Route exact path="/blogs" component={BlogList} />

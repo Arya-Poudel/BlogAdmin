@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 
 const Navbar = () =>{
@@ -8,10 +8,44 @@ const Navbar = () =>{
 		window.location.href = "/"
 	}
 
+	const [message, setMessage] = useState('');
+
+	useEffect(() => {
+		fetch('https://hidden-eyrie-46633.herokuapp.com/admin/blogs', 
+			{
+				mode : 'cors',
+				headers: {
+					Authorization:JSON.parse(localStorage.getItem('token'))
+				}
+			}
+		)
+ 		.then(response => {
+ 			 if (!response.ok) {
+ 			 	localStorage.clear();
+		        throw new Error("ERROR: HTTP status " + response.status);
+		    }
+ 			return response.json();
+ 		})
+  		.then(data => {
+  			setMessage('LOGOUT');
+  		})
+  		.catch(err => {
+  			console.log(err);
+  			setMessage('LOGIN');
+  		})
+	})
+
+
+
 	return(
 		<nav className="navbar ">
-	        <Link to="/blogs" className="navlink">BLOGS</Link>  
-	        <button className="linkBtn" onClick={handleLogout}>Logout</button>      
+			<h1>DEMO ADMIN</h1>
+			<div >
+		        <Link to="/blogs" className="navlink">BLOGS</Link>  
+			    {message==='LOGOUT' && 
+			        <button className="linkBtn" onClick={handleLogout}>Logout</button> 
+			    }
+	        </div>     
 	   </nav>
    	
    )

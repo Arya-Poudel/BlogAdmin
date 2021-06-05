@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Navbar from './Navbar';
 
 const LogIn = () => {
 
@@ -6,7 +7,7 @@ const LogIn = () => {
 	const [message, setMessage] = useState('');
 
 	if(JSON.parse(localStorage.getItem('token'))) {
-			window.location.href = "/blogs";
+			window.location.href = "http://localhost:3000/#/blogs";
 	};
 
 	const handleFormSubmit = (e) => {
@@ -39,14 +40,15 @@ const LogIn = () => {
 
 	return(
 	<>
-		<form id="login_form"  onSubmit={handleFormSubmit} className="form_div">
+		<Navbar />
+		<form id="login_form"  onSubmit={handleFormSubmit} className="form_div" autoComplete="off">
         	<label htmlFor="Adminname">Adminname:</label>
         	<input type="text" id="Adminname" name="Adminname" required/>
         	<label htmlFor="password">Password:</label>
         	<input type="password" id="password" name="password" required/>
 			<button type="submit" className="linkBtn">LOGIN</button>
         </form>
-        <p className="message-post">{message}</p>
+        <p style={{textAlign: "center", fontWeight:"bold"}}>{message}</p>
 		{errorMessage &&
 		 <p style={{textAlign: "center", fontWeight:"bold"}}>
 		 	{errorMessage}

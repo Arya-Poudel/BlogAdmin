@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Navbar from './Navbar';
 
 const DeleteBlog = ({ blogId }) =>{
 
@@ -28,9 +29,12 @@ const DeleteBlog = ({ blogId }) =>{
 	
 	return(
 	<>	
+		<Navbar />
 		<h1 style={{textAlign: "center"}}>Are you sure you want to delete this blog?</h1>
 		
-		<button onClick={handleDelete} className="linkBtn">Yes,delete</button>
+		<div className="action-link">
+			<button onClick={handleDelete} className="linkBtn">Yes,delete</button>
+		</div>
 
 		{errorMessage &&
 		 <p style={{textAlign: "center", fontWeight:"bold"}}>

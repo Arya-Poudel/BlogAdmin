@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import Navbar from './Navbar';
 
 const EditBlog = ({ blogId }) =>{
 
@@ -50,6 +51,7 @@ const EditBlog = ({ blogId }) =>{
 
 	return(
 	<>
+		<Navbar />
 		<form id="edit_blog_form"  onSubmit={handleFormSubmit} className="form_div">
         	<label htmlFor="title">Title:</label>
         	<input type="text" id="title" name="title" defaultValue={blogDetail.title} required/>
